@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício 2</title>
+    
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav {
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box {
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+            width: 80%;
+            max-width: 500px;
+        }
+        input {
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 90%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: royalblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO 2</h1>
+        <h2>Verificar se o Número é Positivo, Negativo ou Zero</h2>
+    </div>
+    <div class="box">
+        <input id="n_ex2" type="number" placeholder="Digite um número">
+        <button onclick="exercicio2()">Verificar</button>
+    </div>
+    <script>
+        function exercicio2() 
+        {
+            let n = Number(document.getElementById('n_ex2').value);
+            let resultado;
+
+            if (n > 0) {
+                resultado = "Positivo";
+            } else if (n < 0) {
+                resultado = "Negativo";
+            } else {
+                resultado = "Zero";
+            }
+
+            alert(resultado);
+        }
+    </script>
+</body>
+</html>
